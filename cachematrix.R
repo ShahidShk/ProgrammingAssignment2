@@ -55,9 +55,13 @@ mat = matrix(uniRndNumbers, nrow=10, ncol=10)
 #initialize functions to cache
 lstFuns = makeMatrix()
 
-# inverse matrix or retreive if cached
+# inverse matrix 
 cacheinverse(lstFuns)
+#print matrix
+lstFuns$get()
 
+# retreive cached values of inversed matrix
+cacheinverse(lstFuns)
 #print matrix
 lstFuns$get()
 

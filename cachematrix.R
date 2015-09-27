@@ -3,8 +3,9 @@
   # 2. retrieve the matrix
   # 3. Retrieve the inverse of the matrix
   # 4. Retreive the cached inverse of a matrix
-makeMatrix <- function(x = matrix()) {
+makeMatrix <- function() {
   #1
+  x = matrix()
   m <- NULL
   set <- function(y) {
     x <<- y
@@ -34,9 +35,8 @@ cacheinverse <- function(x, ...) {
   #1
   m <- x$getinverse()
   if(!is.null(m)) {
-    message("getting cached data")
-    return(m)
-  }
+    message("get cached data")
+   }
   
   #2
   x$set(mat)
@@ -48,7 +48,7 @@ cacheinverse <- function(x, ...) {
 }
 
 #create a 10x10 matrix
-set.seed(12345)
+set.seed(123)
 uniRndNumbers = rnorm(100)
 mat = matrix(uniRndNumbers, nrow=10, ncol=10)
 
